@@ -78,7 +78,7 @@ namespace TutorialEF.Ejemplos
 
         public static void SimpleQuery()
         {
-            //Ejemplo del Querying
+            //Ejemplo del Query
             const string NAME = "Michael";
             SchoolContext context = new SchoolContext();
             try
@@ -101,7 +101,7 @@ namespace TutorialEF.Ejemplos
 
         public static void DoubleQuery()
         {
-            //Ejemplo del Querying con el Inclue
+            //Ejemplo del Query con el Inclue
             const string NAME = "Michael";
             SchoolContext context = new SchoolContext();
             try
@@ -127,7 +127,7 @@ namespace TutorialEF.Ejemplos
 
         public static void QuerryUsingSql()
         {
-            //Ejemplo de querying usando un FromSqlRaw
+            //Ejemplo de query usando un FromSqlRaw
             SchoolContext context = new SchoolContext();
             List<Student> studentList = new List<Student>();
             try
@@ -286,7 +286,7 @@ namespace TutorialEF.Ejemplos
 
         public static void ChangeTracker()
         {
-            //Ajemplo del tracking a los metodos que se invoquen en el Contexto
+            //Ejemplo del tracking a los metodos que se invocan en el Contexto
             //De igual forma se puede hacer para borrar, añadir entre otros
             SchoolContext contexto = new SchoolContext();
             try
