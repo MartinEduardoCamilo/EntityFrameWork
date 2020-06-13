@@ -31,10 +31,10 @@ namespace TutorialEntityFrameWork
                 Console.WriteLine("11. Hacer un Graph en un escenario desconectado.");
                 Console.WriteLine("12. Hacer Querry Parametrizado.");
                 Console.WriteLine("13. Consulta de los estudiante");
-                Console.WriteLine("14. Almacenamineto de varios estudiante con el mismo nombre");
+                Console.WriteLine("14. Almacenamiento de varios estudiante con el mismo nombre");
                 Console.WriteLine("15. Salir.");
 
-                Console.WriteLine("OPCION:");
+                Console.WriteLine("Opción:");
 
                 auxiliar = Console.ReadLine();
                 opcion = Validar(auxiliar);
