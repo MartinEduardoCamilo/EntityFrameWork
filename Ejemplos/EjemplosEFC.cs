@@ -206,6 +206,57 @@ namespace TutorialEF.Ejemplos
             }
         }
 
+        public static void ConsultaStudents()
+        {
+            //Ejemplo para la consulta de estudiate
+
+            var context = new SchoolContext();
+
+            try
+            {
+                var studentsWithSameName = context.Students.ToList();
+
+                if (studentsWithSameName != null)
+                    foreach (var auxiliar in studentsWithSameName)
+                    {
+                        Console.WriteLine(auxiliar.FirstName);
+                    }
+                else
+                    Console.WriteLine("No se encontro ningun estudiante");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                context.Dispose();
+            }
+        }
+
+        public static void WorkingStore()
+        {
+            //Las entidades en el resultado serán rastreadas DbContextpor defecto. 
+            //Si ejecuta el mismo procedimiento almacenado con los mismos parámetros varias veces
+
+            try
+            {
+                var context = new SchoolContext();
+
+                var list1 = context.Students.FromSql("GetStudents 'Bill'").ToList();
+                var list2 = context.Students.FromSql("GetStudents 'Bill'").ToList();
+                var list3 = context.Students.FromSql("GetStudents 'Bill'").ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+
+            }
+        }
+
         public static void UpdatingOnDisconnectedScenario()
         {
             SchoolContext context = new SchoolContext();
@@ -368,6 +419,8 @@ namespace TutorialEF.Ejemplos
                 contexto.Dispose();
             }
         }
+
+
 
         public static void QuerryParametrizado()
         {

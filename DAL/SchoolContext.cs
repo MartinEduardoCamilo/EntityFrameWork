@@ -13,13 +13,13 @@ namespace TutorialEF.DAL
             optionsBuilder.UseSqlServer(@"Server = .\SqlExpress; Database = SchoolDB; Trusted_Connection = True; ");
         }
 
-        //Example of modelBuilder
+        //Ejemplo del modelBuilder
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //With this configurations I force to colocate the primary key manually "Just to Person's entity"
+            //Con estas configuraciones, fuerzo a colocar la clave primaria manualmente "Solo para la entidad de la Persona"
             modelBuilder.Entity<Person>().Property(p => p.pesonId).HasColumnName("Id").HasDefaultValue(0).IsRequired();
 
-            //shadow property
+            //Propiedad sombra
             modelBuilder.Entity<Person>().Property<String>("Ocupacion");
             modelBuilder.Entity<Person>().Property<int>("Edad");
         }
