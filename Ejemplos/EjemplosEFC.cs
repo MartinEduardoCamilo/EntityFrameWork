@@ -241,11 +241,11 @@ namespace TutorialEF.Ejemplos
 
             try
             {
-                var context = new SchoolContext();
+                //var context = new SchoolContext();
 
-                var list1 = context.Students.FromSql("GetStudents 'Bill'").ToList();
-                var list2 = context.Students.FromSql("GetStudents 'Bill'").ToList();
-                var list3 = context.Students.FromSql("GetStudents 'Bill'").ToList();
+                //var list1 = context.Students.FromSql("GetStudents 'Bill'").ToList();
+                //var list2 = context.Students.FromSql("GetStudents 'Bill'").ToList();
+                //var list3 = context.Students.FromSql("GetStudents 'Bill'").ToList();
             }
             catch (Exception)
             {

@@ -14,6 +14,8 @@ namespace TutorialEF.Entidades
         public string LastName { get; set; }
         public StudentAddress Address { get; set; }
 
+        public IList<StudentCourse> StudentCourses { get; set; }
+
         public Student()
         {
             StudentId = 0;

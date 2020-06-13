@@ -11,11 +11,12 @@ namespace TutorialEF.Entidades
         [Key]
         public int CourseId { get; set; }
         public string CourseName { get; set; }
+        public string Description { get; set; }
 
         //Aplicando relaciones 
         public int studentId { get; set; }
         [ForeignKey("studentId")]
-        public virtual Student Student { get; set; }
+        public IList<StudentCourse> StudentCourses { get; set; }
 
         public Course()
         {
