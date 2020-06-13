@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using TutorialEF.DAL;
 using TutorialEF.Entidades;
+using TutorialEntityFrameWork.Entidades;
 
 namespace TutorialEF.Ejemplos
 {
@@ -58,7 +59,16 @@ namespace TutorialEF.Ejemplos
                     CourseName = "Math"
 
                 };
+
+                var address = new StudentAddress()
+                {
+                    City = "S.F.C.M.",
+                    State = "Duarte",
+                    Country = "R.D."
+                };
+
                 context.Courses.Add(auxCourse);
+                context.StudentAddresses.Add(address);
                 bool save = context.SaveChanges() > 0;
 
                 if (save)

@@ -51,5 +51,7 @@ namespace TutorialEF.DAL
         public DbSet<Student> Students { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Person> Persons { get; set; }
+        public DbSet<StudentCourse> StudentCourses { get; set; }
+        public DbSet<StudentAddress> StudentAddresses { get; set; }
     }
 }

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using TutorialEF.Entidades;
 
 namespace TutorialEntityFrameWork.Entidades
 {
-    class Grade
+    public class Grade
     {
         public int GradoId { get; set; }
         public string Name { get; set; }
