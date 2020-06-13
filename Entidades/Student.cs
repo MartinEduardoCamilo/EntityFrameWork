@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using TutorialEntityFrameWork.Entidades;
 
 namespace TutorialEF.Entidades
 {
@@ -11,6 +12,7 @@ namespace TutorialEF.Entidades
         public int StudentId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public StudentAddress Address { get; set; }
 
         public Student()
         {
