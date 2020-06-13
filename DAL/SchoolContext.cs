@@ -18,8 +18,8 @@ namespace TutorialEF.DAL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Con estas configuraciones, fuerzo a colocar la clave primaria manualmente "Solo para la entidad de la Persona"
-            modelBuilder.Entity<Person>().Property(p => p.pesonId).HasColumnName("Id").HasDefaultValue(0).IsRequired();
 
+            modelBuilder.Entity<Person>().Property(p => p.pesonId).HasColumnName("Id").HasDefaultValue(0).IsRequired();
 
             //Relacion de uno a Varios
             /*modelBuilder.Entity<Estudiante>()

@@ -6,6 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200613165718_Second.cs" />
+    <Compile Remove="Migrations\20200613165718_Second.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="microsoft.entityframeworkcore" Version="3.1.5" />
     <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="3.1.5" />
     <PackageReference Include="microsoft.entityframeworkcore.tools" Version="3.1.5">
